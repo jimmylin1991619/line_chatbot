@@ -52,6 +52,18 @@ def handle_message(event):
         sticker_message)
 
         return
+    
+    if ['snoopy', 'Snoopy', '史努比'] in msg:
+    	r = '這個爛東西~'
+    	sticker_message = StickerSendMessage(
+            package_id='11537',
+            sticker_id='52002772'
+        )
+    	line_bot_api.reply_message(
+        event.reply_token,
+        sticker_message)
+
+        return
 
     if msg in ['hi', 'Hi', '哈囉']:
         r = 'hi'
